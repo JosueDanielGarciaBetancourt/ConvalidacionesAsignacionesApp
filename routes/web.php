@@ -20,6 +20,6 @@ Route::post('/logout', [LoginController::class,'logout'])->name('logout');
 // Rutas para página de inicio
 Route::prefix('pagina-inicio')->middleware('auth')->group(function () {
     Route::get('/', [PaginaInicioController::class, 'index'])->name('pagina-inicio');
-    Route::get('/contacto', [PaginaInicioController::class, 'contacto'])->name('pagina-inicio.contacto');
-    Route::get('/cargar-documentos', [PaginaInicioController::class, 'cargarDocumentos'])->name('pagina-inicio.cargar-documentos');
+    Route::get('/asignacion-docente', [PaginaInicioController::class, 'asignacionDocente'])->name('pagina-inicio.asignacion-docente');
+    Route::get('/convalidacion-estudiante', [PaginaInicioController::class, 'convalidacionEstudiante'])->name('pagina-inicio.convalidacion-estudiante');
 });

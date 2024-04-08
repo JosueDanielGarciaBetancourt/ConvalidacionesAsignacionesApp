@@ -11,13 +11,13 @@ class PaginaInicioController extends Controller
         return view('Inicio.paginaInicio');
     }
 
-    public function cargarDocumentos()
+    public function convalidacionEstudiante()
     {
-        return view('Inicio.cargarDocumentos');
+        return view('Inicio.convalidacionEstudiante');
     }
 
-    public function contacto()
+    public function asignacionDocente()
     {
-        return view('paginaIInicionicio.contacto');
+        return view('Inicio.asignacionDocente');
     }
 }
