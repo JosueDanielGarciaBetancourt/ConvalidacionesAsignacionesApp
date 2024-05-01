@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('InstitucionProcedencia', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre'); //255 caracteres máximo
+        Schema::create('Mallas', function (Blueprint $table) {
+            $table->string('idMalla', 10)->primary(); // ID con hasta 10 caracteres máximo
+            $table->integer('anioMalla')->unsigned(); //2018
             $table->timestamps(); //created_at updated_at
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('InstitucionProcedencia');
+        Schema::dropIfExists('Mallas');
     }
 };

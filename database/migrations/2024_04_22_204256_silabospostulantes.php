@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Cursos', function (Blueprint $table) {
-            $table->string('idCurso', 5)->primary(); 
-            $table->string('nombreCurso');
-            $table->string('ciclo');
-            $table->string('creditos');  
-            $table->string('silabo'); 
+        Schema::create('SilabosPostulantes', function (Blueprint $table) {
+            $table->string('idSilaboPostulante', 15)->primary(); //curso123-2024
+            $table->text('sumillaSilaboPostulante');
+            $table->text('referenciasSilaboPostulante');
+            $table->integer('anioSilaboPostulante')->unsigned();
             $table->timestamps(); //created_at updated_at
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Cursos');
+        Schema::dropIfExists('SilabosPostulantes');
     }
 };

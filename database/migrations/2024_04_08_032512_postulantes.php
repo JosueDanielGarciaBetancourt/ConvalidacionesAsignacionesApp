@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Postulante', function (Blueprint $table) {
+        Schema::create('Postulantes', function (Blueprint $table) {
             $table->string('idPostulante', 8)->primary(); //8 caracteres máximo
-            $table->string('nombre'); //255 caracteres máximo
-            $table->string('carrera'); //255 caracteres máximo
+            $table->string('nombrePostulante', 100); //100 caracteres máximo
+            $table->string('carreraProcedenciaPostulante', 100); //100 caracteres máximo
+            $table->string('institucionProcedenciaPostulante', 100); //100 caracteres máximo
             $table->timestamps(); //created_at updated_at
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Postulante');
+        Schema::dropIfExists('Postulantes');
     }
 };

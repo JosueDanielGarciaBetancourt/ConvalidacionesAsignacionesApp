@@ -6,23 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('Carrera', function (Blueprint $table) {
-            $table->string('idCarrera', 10)->primary(); 
-            $table->string('nombreCarrera');
+        Schema::create('Carreras_Cursos', function (Blueprint $table) {
+            $table->increments('id_CarrerasCursos'); // id autoincremental y clave primaria
             $table->timestamps(); //created_at updated_at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('Carrera');
+        Schema::dropIfExists('Carreras_Cursos');
     }
 };

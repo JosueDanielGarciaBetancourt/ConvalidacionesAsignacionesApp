@@ -6,23 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('Docente', function (Blueprint $table) {
-            $table->string('idDocente', 8)->primary(); //DNI
-            $table->string('nombre');
+        Schema::create('ReportesConvalidaciones', function (Blueprint $table) {
+            $table->string('idReporteConvalidacion', 15)->primary(); //Rep001-77043114
+            $table->datetime('fechaHoraReporteConvalidacion');
+            $table->text('rutaArchivoPDF');
             $table->timestamps(); //created_at updated_at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-       Schema::dropIfExists('Docente');
+        Schema::dropIfExists('ReportesConvalidaciones');
     }
 };

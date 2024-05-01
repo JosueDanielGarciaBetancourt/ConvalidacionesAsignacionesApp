@@ -5,9 +5,11 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PaginaInicioController;
 
-Route::get('/', function () {
+// default screen
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
 
 //Login
 Route::view('/login', "login")->name('login');
