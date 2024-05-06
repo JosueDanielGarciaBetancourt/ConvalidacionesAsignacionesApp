@@ -53,19 +53,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>CONVALIDACIÓN Y ASIGNACIÓN UC</h1>
-    </header>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Acerca de</a>
-        <a href="#">Contacto</a>
-    </nav>
     <main>
         @yield('content')
     </main>
-    <footer>
-        &copy; {{ date('Y') }} CONVALIDACIÓN Y ASIGNACIÓN UC. Todos los derechos reservados.
-    </footer>
 </body>
 </html>

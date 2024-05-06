@@ -5,13 +5,9 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PaginaInicioController;
 
-// default screen
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
 
 //Login
+Route::view('/', "login")->name('login');
 Route::view('/login', "login")->name('login');
 Route::view('/registro', "register")->name('registro');
 
@@ -21,7 +17,15 @@ Route::post('/logout', [LoginController::class,'logout'])->name('logout');
 
 // Rutas para página de inicio
 Route::prefix('pagina-inicio')->middleware('auth')->group(function () {
-    Route::get('/', [PaginaInicioController::class, 'index'])->name('pagina-inicio');
-    Route::get('/asignacion-docente', [PaginaInicioController::class, 'asignacionDocente'])->name('pagina-inicio.asignacion-docente');
-    Route::get('/convalidacion-estudiante', [PaginaInicioController::class, 'convalidacionEstudiante'])->name('pagina-inicio.convalidacion-estudiante');
+    Route::get('/convalidar-cursos', [PaginaInicioController::class, 'convalidarCursos'])->name('pagina-inicio.convalidar-cursos');
+    Route::get('/historial-convalidaciones', [PaginaInicioController::class, 'historialConvalidaciones'])->name('pagina-inicio.historial-convalidaciones');
+    Route::get('/postulantes-registrar', [PaginaInicioController::class, 'postulantesRegistrar'])->name('pagina-inicio.postulantes-registrar');
+    Route::get('/postulantes-visualizar', [PaginaInicioController::class, 'postulantesVisualizar'])->name('pagina-inicio.postulantes-visualizar');
 });
+
+/*
+pagina-inicio/convalidar-cursos
+pagina-inicio/historial-convalidaciones
+pagina-inicio/postulantes-registrar
+pagina-inicio/postulantes-visualizar
+*/

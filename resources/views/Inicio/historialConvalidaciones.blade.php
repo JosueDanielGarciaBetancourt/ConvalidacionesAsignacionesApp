@@ -3,5 +3,5 @@
 @section('title', 'Bienvenido a Convalidaciones App')
 
 @section('content')
-Aquí se mostrará la interfaz para realizar una convalidación de estudiante
+	Aquí se mostrará el historial de convalidaciones de los postulantes
 @endsection
