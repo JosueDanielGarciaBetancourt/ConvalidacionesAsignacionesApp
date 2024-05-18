@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Postulante;
 
 class PaginaInicioController extends Controller
 {
@@ -26,4 +27,5 @@ class PaginaInicioController extends Controller
     {
         return view('Inicio.postulantesVisualizar');
     }
+
 }

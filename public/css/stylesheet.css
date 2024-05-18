@@ -1,0 +1,130 @@
+.main_container{
+	margin-left: 40px; /* Agrega un margen izquierdo de 20px */
+}
+
+.logo_UC_container {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+	margin-left: 20px; 
+}
+
+.logo_UC_container img {
+    width: 50%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 60%; /* La altura ocupará el 100% del alto del contenedor */
+    object-fit: cover; /* La imagen se ajustará manteniendo su relación de aspecto y recortando cualquier exceso */
+}
+
+.campusHyo_UC_container{
+    width: 850px;
+    height: 550px;
+	float: right; /* Hace que la imagen flote a la derecha */
+	margin-top: -500px; /* Desplaza la imagen hacia arriba */
+}
+
+.campusHyo_UC_container img{
+	float: right; /* Hace que la imagen flote a la derecha */
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La altura ocupará el 100% del alto del contenedor */
+	margin-top: -50px; /* Desplaza la imagen hacia arriba */
+    object-fit: cover; /* La imagen se ajustará manteniendo su relación de aspecto y recortando cualquier exceso */
+}
+
+.title_container{
+	display: inline-block;
+	width: 300px;
+    height: 100px;		
+}
+
+h1{
+	color: #027EB3;
+	font-family: 'Source Sans 3';
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1.28;
+	letter-spacing: -0.5px;
+	text-align: left;
+	margin-left: 70px; 
+	margin-top: 0px;
+}
+
+.subtitle_container{
+	width: 300px;
+    height: 30px;
+}
+
+h2{
+	font-weight: bold;
+	color: #000000;
+	font-family: 'Source Sans 3';
+	font-size: 15px;
+	line-height: 1.3;
+	text-align: left;
+}
+
+.otherText_container{
+	width: 300px;
+    height: 30px;
+}
+
+h3{
+	color: #000000;
+	font-family: 'Source Sans 3';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.3;
+	text-align: left;
+}
+
+h4{
+	color: #000000;
+	font-family: 'Source Sans 3';
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 1.3;
+	text-align: left;
+}
+
+.credential-box-input{
+	width: 250px;
+	height: 30px;
+	padding: 0px 10px 0px 20px;
+	background: #FFFFFF;
+	color: #000000;
+	border-color: #D6D6D6;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 4px 4px 4px 4px;
+	font-family: "Source Sans 3";
+	font-weight: 500;
+	font-size: 15px;
+	text-align: left;
+}
+
+.remember_check{
+	width: 260px;
+    height: 30px;
+	color: #000000;
+	font-family: "Source Sans 3";
+	font-weight: 400;
+	font-size: 15px;
+	text-decoration: underline;
+	line-height: 1.3;
+	text-align: left;
+}
+
+.login_button{
+	width: 280px;
+	height: 50px;
+	padding: 0px 10px 0px 10px;
+	background: #A76307;
+	color: #FFFFFF;
+	border-color: #00000000;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px 4px 4px 4px;
+	font-family: "Source Sans 3";
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+}

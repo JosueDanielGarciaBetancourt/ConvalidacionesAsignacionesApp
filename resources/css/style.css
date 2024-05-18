@@ -1,0 +1,13 @@
+.imagenLogIn {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.containerImagen {
+    float: right; /* Coloca el contenedor de la imagen a la derecha */
+    margin-left: 20px; /* Añade un margen a la izquierda para separar el formulario */
+}
+
+.formulario {
+    width: 100%; /* Establece el ancho del formulario */
+}

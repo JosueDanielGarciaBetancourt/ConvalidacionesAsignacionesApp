@@ -2,15 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\PostulanteCursoPostulante;
 use Illuminate\Database\Seeder;
-use App\Models\User;  
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {   
-        User::factory(5)->create();
+        $this->call(UserSeeder::class);
         $this->call(CursoLocalSeeder::class);
         $this->call(CarreraSeeder::class);
         $this->call(MallaSeeder::class);

@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('pagina-inicio'));
+        return redirect(route('pagina-inicio.convalidar-cursos'));
     }
 
     public function login(Request $request)
@@ -34,14 +34,18 @@ class LoginController extends Controller
             "password" =>$request->password,
         ];
 
-        $remember = ($request->has('remember') ? true:false);
-        
+        $remember = $request->filled('remember'); // verify checkbox name
+
+        // Imprime el valor de $remember
+        //dd($remember);
+
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('pagina-inicio'));
+            return redirect()->intended(route('pagina-inicio.convalidar-cursos'));
         } else {
             // Autenticación fallida
-            return back()->withInput()->withErrors(['email' => 'Credenciales incorrectas']);
+            //return redirect('login');
+            return redirect('login')->withInput()->withErrors(['email' => 'Credenciales incorrectas']);
         }
     }
 
